@@ -1,5 +1,6 @@
 puts "🌱 Seeding spices..."
 
-# Seed your database here
-
+Animal.create(name: "pig")
+Category.create(name: "Farm Animals")
+  
 puts "✅ Done seeding!"
