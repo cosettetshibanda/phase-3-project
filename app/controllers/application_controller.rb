@@ -32,4 +32,14 @@ class ApplicationController < Sinatra::Base
     category.to_json
   end
 
+  post "/animals" do
+    animal = Animal.create(
+      name: params[:name],
+      img: params[:img],
+      category_id: params[:category_id]
+    )
+    animal.to_json
+  end
+
 end
+
