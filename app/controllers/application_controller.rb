@@ -17,10 +17,10 @@ class ApplicationController < Sinatra::Base
     category.to_json(include: :animals)
   end
 
-  delete '/categories/:id' do
-    category = Category.find(params[:id])
-    category.destroy
-    category.to_json
+  delete '/animals/:id' do
+    animal = Animal.find(params[:id])
+    animal.destroy
+    animal.to_json
   end
 
   patch '/categories/:id' do
