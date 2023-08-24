@@ -23,13 +23,12 @@ class ApplicationController < Sinatra::Base
     animal.to_json
   end
 
-  patch '/categories/:id' do
-    category = Category.find(params[:id])
-    binging.pry
-    category.update(
-      name: params[:name]
+  patch '/animals/:id' do
+    animal = Animal.find(params[:id])
+    animal.update(
+      img: params[:img]
     )
-    category.to_json
+    animal.to_json
   end
 
   post "/animals" do
